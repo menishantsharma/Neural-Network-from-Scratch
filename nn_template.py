@@ -2,28 +2,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 np.random.seed(42)
 
-# Returns the ReLU value of the input x
 def relu(x):
     return max(0, x)
 
-# Returns the derivative of the ReLU value of the input x
 def relu_derivative(x):
     return (x>0).astype(int)
 
-## TODO 1a: Return the sigmoid value of the input x
 def sigmoid(x):
     return 1/(1+np.exp(-x))
 
-## TODO 1b: Return the derivative of the sigmoid value of the input x
 def sigmoid_derivative(x):
     s = sigmoid(x)
     return s*(1-s)
 
-## TODO 1c: Return the derivative of the tanh value of the input x
 def tanh(x):
     return np.tanh(x)
 
-## TODO 1d: Return the derivative of the tanh value of the input x
 def tanh_derivative(x):
     return 1-np.square(tanh(x))
 
